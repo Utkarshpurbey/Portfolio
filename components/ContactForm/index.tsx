@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     // Handle form submission here (you can send the data to your server).
   };
@@ -47,7 +47,7 @@ const ContactForm = () => {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              rows="4"
+              rows={4}
               required
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#7d12ff]"
             ></textarea>
