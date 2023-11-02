@@ -1,4 +1,10 @@
-const MainPage = () =>{
-  return (<h1>Hello</h1>)
-}
-export default MainPage
+"use client"
+import GitHubCalendar from "react-github-calendar";
+const MainPage = () => {
+  return (
+    <div>
+      <GitHubCalendar username="utkarshpurbey" />
+    </div>
+  );
+};
+export default MainPage;
