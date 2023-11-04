@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts"
-  ],
+, "public/utils/routes.js"  ],
   "exclude": [
     "node_modules"
   ]
