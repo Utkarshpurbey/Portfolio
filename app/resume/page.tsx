@@ -11,11 +11,10 @@ const ResumePage = () => {
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-    console.log('uttu',process.env.NEXT_PUBLIC_PREFIX)
   }, []);
 
   const onButtonClick = () => {
-    fetch("/Resume.pdf").then((response) => {
+    fetch(`${process.env.NEXT_PUBLIC_PREFIX}Resume.pdf`).then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");
@@ -37,7 +36,10 @@ const ResumePage = () => {
         </button>
       </div>
       <div className="flex py-4 justify-center">
-        <Document file="/Resume.pdf" className="d-flex  w-80 ml-[-240px]">
+        <Document
+          file={`${process.env.NEXT_PUBLIC_PREFIX}Resume.pdf`}
+          className="d-flex  w-80 ml-[-240px]"
+        >
           <Page
             pageNumber={1}
             scale={width > 786 ? 1.95 : 0.6}
