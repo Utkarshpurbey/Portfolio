@@ -11,7 +11,7 @@ const ResumePage = () => {
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-    console.log('uttu',process.env.NODE_ENV)
+    console.log('uttu',process.env.NEXT_PUBLIC_PREFIX)
   }, []);
 
   const onButtonClick = () => {
