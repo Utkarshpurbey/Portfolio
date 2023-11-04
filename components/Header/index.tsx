@@ -23,7 +23,7 @@ function MyHeader() {
               </div>
               <div className="hidden md:block w-full">
                 <div>
-                  <div className="ml-10 flex items-baseline justify-center space-x-4 ">
+                  <div className="ml-10 flex items-baseline justify-center space-x-4 cursor-pointer ">
                     {headerInfo.map((index) => (
                       <div
                         key={index.title}
