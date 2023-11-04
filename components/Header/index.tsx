@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { headerInfo } from "@/public/utils/constants";
 import { HumBurgerSVG, CrossSVG } from "@/public/assets/svg/headerSVGs";
+import { useRouter } from "next/navigation";
 
 function MyHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter()
   return (
     <div>
       <nav className="bg-gray-800">
@@ -23,13 +25,13 @@ function MyHeader() {
                 <div>
                   <div className="ml-10 flex items-baseline justify-center space-x-4 ">
                     {headerInfo.map((index) => (
-                      <a
+                      <div
                         key={index.title}
-                        href={index.routeTo}
+                        onClick={() =>router.push(index.routeTo)}
                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                       >
                         {index.title}
-                      </a>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -63,13 +65,13 @@ function MyHeader() {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
                 {headerInfo.map((index) => (
-                  <a
+                  <div
                     key={index.title}
-                    href={index.routeTo}
+                    onClick={() =>router.push(index.routeTo)}
                     className=" hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     {index.title}
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>
