@@ -1,23 +1,38 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily:{
+    fontFamily: {
       poppins: ["Poppins", "sans-serif"],
     },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "15%": { transform: "rotate(2deg)" },
+          "30%": { transform: "rotate(-1deg)" },
+          "40%": { transform: "rotate(2deg)" },
+          "50%": { transform: "rotate(-0.5deg)" },
+          "60%": { transform: "rotate(1.5deg)" },
+          "70%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
+      },
+      animation: {
+        wave: "wave 1.5s infinite",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
