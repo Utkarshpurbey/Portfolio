@@ -14,7 +14,7 @@ const ResumePage = () => {
   }, []);
 
   const onButtonClick = () => {
-    fetch(`${process.env.NEXT_PUBLIC_PREFIX}Resume.pdf`).then((response) => {
+    fetch('assets/Resume.pdf').then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");

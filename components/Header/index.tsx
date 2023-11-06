@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { headerInfo } from "@/public/utils/constants";
-import { HumBurgerSVG, CrossSVG } from "@/public/assets/svg/headerSVGs";
 import { useRouter, usePathname } from "next/navigation";
 import logo from "../../public/assets/image/logo.png";
 import Image from "next/image";
+import {RxHamburgerMenu,RxCross1} from "react-icons/rx";
 
 function MyHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ function MyHeader() {
     "transition hover:-translate-y-1 hover:scale-105 cursor-pointer";
   return (
     <div>
-      <nav className="md:bg-transparent  bg-gray-700">
+      <nav className="bg-transparent">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center w-full">
@@ -55,7 +55,7 @@ function MyHeader() {
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
-                {!isOpen ? <HumBurgerSVG /> : <CrossSVG />}
+                {!isOpen ? <RxHamburgerMenu /> : <RxCross1 />}
               </button>
             </div>
           </div>
