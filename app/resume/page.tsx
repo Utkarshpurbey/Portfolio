@@ -37,8 +37,8 @@ const ResumePage = () => {
       </div>
       <div className="flex py-4 justify-center">
         <Document
-          file={`${process.env.NEXT_PUBLIC_PREFIX}Resume.pdf`}
-          className="d-flex  w-80 ml-[-240px]"
+          file={'assets/Resume.pdf'}
+          className="d-flex w-80 ml-[-260px]"
         >
           <Page
             pageNumber={1}
