@@ -3,34 +3,43 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { headerInfo } from "@/public/utils/constants";
 import { HumBurgerSVG, CrossSVG } from "@/public/assets/svg/headerSVGs";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import logo from "../../public/assets/image/logo.png";
+import Image from "next/image";
 
 function MyHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
+  const pathname = usePathname();
+  const anchorClasses =
+    "transition hover:-translate-y-1 hover:scale-105 cursor-pointer";
   return (
     <div>
-      <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">  
+      <nav className="md:bg-transparent  bg-gray-700">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             <div className="flex items-center w-full">
-              <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                />
+              <div className="flex-shrink-0 mt-11 ">
+                <Image src={logo} alt="logo" height={120} width={120} />
               </div>
               <div className="hidden md:block w-full">
                 <div>
-                  <div className="ml-10 flex items-baseline justify-center space-x-4 cursor-pointer ">
+                  <div className="ml-10 flex items-baseline justify-center space-x-4  ">
                     {headerInfo.map((index) => (
                       <div
                         key={index.title}
-                        onClick={() =>router.push(index.routeTo)}
-                        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        onClick={() => router.push(index.routeTo)}
+                        className=" text-white md:px-10 py-2 rounded-md text-base font-medium"
                       >
-                        {index.title}
+                        <div
+                          className={
+                            pathname === index.routeTo
+                              ? anchorClasses + " text-[#FECD56]"
+                              : anchorClasses
+                          }
+                        >
+                          {index.title}{" "}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -67,8 +76,8 @@ function MyHeader() {
                 {headerInfo.map((index) => (
                   <div
                     key={index.title}
-                    onClick={() =>router.push(index.routeTo)}
-                    className=" hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => router.push(index.routeTo)}
+                    className=" hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-sm font-medium"
                   >
                     {index.title}
                   </div>
