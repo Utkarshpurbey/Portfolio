@@ -27,7 +27,7 @@ const ResumePage = () => {
 
   return (
     <>
-      <div className="flex justify-center p-6">
+      <div className="flex justify-center">
         <button
           className="bg-[#7d12ff] opacity-90 hover:opacity-100 rounded-2xl py-2 px-7"
           onClick={onButtonClick}

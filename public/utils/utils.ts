@@ -80,7 +80,3 @@ export default function generatePoissonDiskSampling(width:number, height:number,
   
     return points;
   }
-  
-  // Usage
-  // Now, you can use the `points` array to draw stars on your canvas.
-  

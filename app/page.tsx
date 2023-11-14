@@ -4,8 +4,8 @@ import Image from "next/image";
 import bitemoji from "../public/assets/image/bitemoji.png";
 const MainPage = () => {
   return (
-    <div className="text-white md:px-[100px] md:pt-[7%]">
-      <div className="flex justify-between ">
+    <div className="text-white flex items-center justify-center">
+      <div className="flex justify-between w-[90%]">
         <div className="md:text-[64px] font-semibold">
           {" "}
           <div>

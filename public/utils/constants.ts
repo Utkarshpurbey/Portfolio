@@ -1,7 +1,7 @@
 import { ROUTE_NAMES } from "./routes";
 import { ExperienceProps, NewExperienceProps } from "./apiTypes";
-import ncLogo from '../../public/assets/image/ncLogo.png'
-import tenLogo from '../../public/assets/image/tenLogo.jpeg'
+import ncLogo from "../../public/assets/image/ncLogo.png";
+import tenLogo from "../../public/assets/image/tenLogo.jpeg";
 
 export const headerInfo = [
   {
@@ -65,21 +65,22 @@ export const newExpList: NewExperienceProps[] = [
     companyName: "Ninjacart",
     tenure: "Jul 23 - Present",
     role: "Software Development Engineer",
-    desc: "  Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum?",
-    logo : ncLogo
+    desc: "  Implemented UI enhancements and API integrations to streamline onboarding for 5,000+ retailers, enhancing user experience. Designed Buyer Subscription models from scratch, had adoption rate of more than 75%. Successfully launched a Refer-and-Earn program, driving mutual benefits for referrers, referees, and overall company growth.",
+    logo: ncLogo,
   },
   {
     companyName: "Ninjacart",
     tenure: "Jan 23 - Jun 23",
     role: "Software Development Intern",
     desc: "  Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum?",
-    logo : ncLogo
-  },{
+    logo: ncLogo,
+  },
+  {
     companyName: "The Entrepreneurship Network",
     tenure: "Jun 21 - Jul 21",
     role: "Scrum Master Intern",
     desc: "  Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum? Quidem voluptatem possimus vel earum?",
     logo: tenLogo,
-    isLast:true
-  }
+    isLast: true,
+  },
 ];

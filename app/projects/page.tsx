@@ -1,4 +1,6 @@
- const ProjectPage = ()=>{
-    return(<h1>Projects</h1>)
-}
+import UnderConstructionComponent from "@/components/Under_construction";
+
+const ProjectPage = () => {
+  return <UnderConstructionComponent />;
+};
 export default ProjectPage;
