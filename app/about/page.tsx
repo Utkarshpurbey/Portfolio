@@ -1,4 +1,6 @@
-const AboutPage = () =>{
-    return (<h1>About</h1>)
-}
-export default AboutPage
+import UnderConstructionComponent from "@/components/Under_construction";
+
+const AboutPage = () => {
+  return <UnderConstructionComponent />;
+};
+export default AboutPage;

@@ -19,15 +19,6 @@ const background = {
     "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3d73e0,endColorstr=#de8fff,GradientType=1)",
 };
 
-const shootingStarContainer = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "88%",
-  overflow: "hidden",
-  zIndex: 0, // Set the z-index to a lower value
-};
 
 export default function RootLayout({
   children,
@@ -37,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="font-poppins z-10" style={background}>
+        <div className="font-poppins z-10 w-full" style={background}>
           <div className="min-h-screen relative z-10">
           <MyHeader />
-           <div className="p-8">{children}</div> 
+           <div className="p-10">{children}</div> 
             <MyFooter />
           </div>
           <div className="fixed top-0 left-0 w-full min-h-screen overflow-hidden z-0">

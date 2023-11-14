@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ncLogo from "../../public/assets/image/ncLogo.png";
 import { NewExperienceProps } from "@/public/utils/apiTypes";
 
 const NewExpericenceCard = (props: NewExperienceProps) => {
@@ -10,7 +9,7 @@ const NewExpericenceCard = (props: NewExperienceProps) => {
           <div className="font-medium text-xl">{props.companyName}</div>
           <div className="text-xs">{props.tenure}</div>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end w-[60%]">
           <div>
             <div className="h-10 w-10 rounded-full border-[1px] border-dashed border-gray-500 flex items-center justify-center">
               <div className="h-[25px] w-[25px] rounded-full ">
@@ -25,12 +24,12 @@ const NewExpericenceCard = (props: NewExperienceProps) => {
             </div>
             {!props.isLast ? (
               <div className="flex items-center justify-center">
-                <div className="h-36 border-[1px] border-dashed border-gray-500"></div>
+                <div className="h-32 border-[1px] border-dashed border-gray-500"></div>
               </div>
             ) : null}
           </div>
 
-          <div className="w-[50%] pl-5">
+          <div className=" pl-5">
             <div className="font-medium text-xl pb-2">{props.role}</div>
             <div className="text-xs">{props.desc}</div>
           </div>
