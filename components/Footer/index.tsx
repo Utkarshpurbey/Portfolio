@@ -11,16 +11,16 @@ const MyFooter = () => {
           &copy; {new Date().getFullYear()} Utkarsh Purbey
         </div>
         <div className="mt-2 flex items-center justify-center">
-          <a href={socialLinks.GITHUB} className="mr-4">
+          <a href={socialLinks.GitHub} className="mr-4">
             <FaGithub size={20} />
           </a>
-          <a href={socialLinks.LINKEDIN} className=" mr-4">
+          <a href={socialLinks.LinkedIn} className=" mr-4">
             <FaLinkedin size={20} />
           </a>
-          <a href={socialLinks.TWITTER} className="mr-4">
+          <a href={socialLinks.Twitter} className="mr-4">
             <FaTwitter size={20} />
           </a>
-          <a href={socialLinks.INSTAGRAM} className="mr-4">
+          <a href={socialLinks.Instagram} className="mr-4">
             <FaInstagram size={20} />
           </a>
         </div>
