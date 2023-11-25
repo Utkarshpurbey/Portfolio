@@ -9,16 +9,16 @@ const ContactPage = () => {
     )}`;
   };
   return (
-    <div className="flex items-center justify-center">
-      <div className="text-left w-1/2">
-        <div className="font-light md:text-[32px] pb-5">
+    <div className="flex items-center justify-center font-sans">
+      <div className="text-center w-1/2">
+        <div className="font-light md:text-lg pb-5">
           Have a project or job opportunities in mind ?
         </div>
-        <div className="font-normal md:text-[42px] pb-5">
+        <div className="font-semibold md:text-[2.625rem] pb-5">
           Get in touch with me to discuss in detail about the opportunity.
         </div>
-        <div className="font-normal md:leading-10 md:text-[22px] pb-5">
-          Email me to contact me. Let’s work together to build something{" "}
+        <div className="md:leading-10 md:text-xl font-light pb-5">
+         You can <u onClick={() => handleClick()}>mail</u> me to contact me. You can also reach out to me over Linkedin. Thanks for being with me till here . Let’s work together to build something{" "}
           <ColorChangingText inputString={"Great."} />
         </div>
         <div className="flex justify-center">

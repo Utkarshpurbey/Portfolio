@@ -40,6 +40,10 @@ const config: Config = {
         wave: "wave 1.5s infinite",
         dashedLine: "animateDashedLine 2s linear infinite",
       },
+      fontFamily: {
+        sans: ['"DM Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
