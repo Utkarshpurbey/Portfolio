@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts"
-, "public/utils/routes.ts"  ],
+, "public/utils/routes.ts", "components/ExperienceCard/index.tsx", "components/colorChange/index.tsx"  ],
   "exclude": [
     "node_modules"
   ]

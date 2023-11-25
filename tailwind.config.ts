@@ -27,9 +27,22 @@ const config: Config = {
           "70%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        animateDashedLine: {
+          '0%': {
+            transform: 'scaleX(1)',
+          },
+          '100%': {
+            transform: 'scaleX(0)',
+          },
+        },
       },
       animation: {
         wave: "wave 1.5s infinite",
+        dashedLine: "animateDashedLine 2s linear infinite",
+      },
+      fontFamily: {
+        sans: ['"DM Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
