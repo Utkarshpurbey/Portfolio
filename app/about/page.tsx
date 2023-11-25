@@ -44,7 +44,7 @@ const AboutPage = () => {
             For any sort of help/enquiry, you can always reach out to me. You
             can shoot a{" "}
             <u onClick={() => router.push(ROUTE_NAMES.CONTACTS)}>mail</u> and
-            I'll be back.
+            I#&quot;ll be back.
           </div>
         </div>
         <div>
